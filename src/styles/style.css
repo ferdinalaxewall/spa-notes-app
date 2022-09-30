@@ -1,0 +1,132 @@
+:root {
+  --background:#5F7161;
+  --primary: #EFEAD8;
+  --secondary:#D0C9C0;
+  --button:#6D8B74;
+  --font:'Poppins', sans-serif;
+  --extra-light:200;
+  --regular:400;
+  --medium:500;
+  --bold:700;
+  --body:16px;
+  --subtitle:20px;
+  --title:22px;
+  --section-title: 25px;
+  --navbar-title:30px;
+} 
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button:focus, textarea:focus, input:focus{
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a, button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  -moz-transition: all .15s ease-out;
+  -ms-transition: all .15s ease-out;
+  -o-transition: all .15s ease-out;
+}
+
+a:hover, button:hover{
+  opacity: 0.75;
+}
+
+
+body {
+  font-family: var(--font);
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+main{
+  width: 1280px;
+  margin: 30px auto;
+}
+
+.notes-app__navigation{
+  width: 100%;
+  display: flex;
+  border-bottom: 1px groove var(--primary);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.navigation__brand{
+  font-size: var(--navbar-title);
+}
+
+.navigation__archives{
+  background-color: var(--button);
+  padding: 7.5px 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+section h1{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  margin-bottom: 20px;
+  font-size: var(--section-title);
+}
+
+.search-bar-group{
+  position: relative;
+}
+
+.search-bar-group label{
+  margin-bottom: 0;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  display: grid;
+  place-items:center;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.search-bar-group input{
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+  font-family: var(--font);
+  font-weight: var(--extra-light);
+  font-size: var(--body);
+  padding: 10px;
+  padding-left: 45px;
+  border-radius: 10px;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+input::placeholder{
+  color: var(--secondary);
+  font-weight: var(--regular);
+}
